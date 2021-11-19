@@ -1,0 +1,39 @@
+.container {
+    display: grid;
+    grid-template-columns: 6rem calc(100vw - 6rem);
+    grid-template-rows: 100vh;
+
+    background-image: linear-gradient(to bottom right, #2a424b, #111517);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.3rem;
+    border-right: 1px solid #949ea3;
+}
+
+.main {
+    padding-top: 1.3rem;
+    padding-right: 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.section__about {
+    position: absolute;
+    bottom: 0;
+    padding-left: 5rem;
+    display: flex;
+    color: white;
+    align-items: center;
+
+    background: radial-gradient(
+        100% 2631.09% at 0% 0%,
+        rgba(0, 0, 0, 0.42) 0%,
+        rgba(0, 0, 0, 0.558) 100%
+    );
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}

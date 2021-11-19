@@ -1,0 +1,169 @@
+/////////////////////////
+// SIDEBAR
+.brand {
+    &__name {
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 1.8rem;
+        align-self: center;
+        // margin-top: 0.4rem;
+    }
+
+    &__social-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        svg {
+            color: rgba($color: #fff, $alpha: 0.75);
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+/////////////////////////
+// NAVBAR
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+
+    &__list {
+        color: white;
+        list-style: none;
+        font-size: 1rem;
+        font-weight: 700;
+        display: flex;
+        margin-right: 2.5rem;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 14px;
+        }
+
+        a:link,
+        a:visited {
+            color: currentColor;
+            text-decoration: none;
+            // transition: all 2s;
+        }
+
+        a::after {
+            content: "";
+            display: block;
+            height: 0;
+            width: 0;
+            transition: width 0.3s;
+        }
+
+        &--active {
+            &::after {
+                content: "";
+                width: 100%;
+                display: block;
+                height: 3px;
+                background-color: white;
+            }
+
+            &:hover::after {
+                content: "";
+                width: 0;
+                height: 0;
+            }
+        }
+
+        a:hover::after {
+            content: "";
+            width: 100%;
+            display: block;
+            height: 3px;
+            background-color: white;
+        }
+    }
+
+    &__logo {
+        color: rgba($color: #fff, $alpha: 0.8);
+    }
+}
+
+//////////////////////////
+//MAIN CONTENT
+.content {
+    height: calc(100vh - 37.8px);
+    display: flex;
+
+    &__text {
+        flex-basis: 40%;
+        transform: translateX(8rem) translateY(6rem);
+
+        h1 {
+            color: white;
+            font-size: 4.2vw;
+        }
+
+        p {
+            color: white;
+            font-size: 0.9rem;
+        }
+    }
+
+    &__image-div {
+        flex: 1 0 60%;
+        background-image: url(../img/space-bg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transform: scale(1.1) translateY(-1rem);
+    }
+}
+
+//////////////////////////
+//ABOUT SECTION
+.about {
+    &__image-div {
+        // width: 300px;
+        height: 170px;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__exploration {
+        margin-left: 20px;
+        flex: 1;
+
+        &--heading {
+            @include about-heading;
+        }
+
+        &--text {
+            @include about-text;
+        }
+    }
+
+    &__link {
+        flex-basis: 20%;
+        align-self: flex-end;
+
+        &--button {
+            font-size: 60px;
+        }
+    }
+
+    &__footprint {
+        flex-basis: 20%;
+        &--heading {
+            @include about-heading;
+        }
+
+        &--text {
+            @include about-text;
+        }
+    }
+}

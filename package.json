@@ -1,0 +1,25 @@
+{
+    "name": "xae-project",
+    "version": "1.0.0",
+    "description": "Xae Project From The design and Build Challenge",
+    "main": "index.js",
+    "scripts": {
+        "watch:sass": "node-sass sass/main.scss css/style.css -w",
+        "live-server": "live-server --browser=FIREFOX",
+        "start": "npm-run-all --parallel watch:sass live-server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chaderenyore/xae-challenge.git"
+    },
+    "author": "Chadere Oghenenyoreme",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/chaderenyore/xae-challenge/issues"
+    },
+    "homepage": "https://github.com/chaderenyore/xae-challenge#readme",
+    "devDependencies": {
+        "node-sass": "^6.0.1",
+        "npm-run-all": "^4.1.5"
+    }
+}
